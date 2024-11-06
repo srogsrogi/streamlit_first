@@ -8,6 +8,17 @@ if st.button('click me'):
 if st.button('Go to NAVER'):
     st.markdown('[naver](https://www.naver.com)')
 
+# 버튼처럼 보이는 하이퍼링크
+st.markdown(
+    """
+    <a href="https://www.naver.com" target="_blank">
+        <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+            Go to naver.com
+        </button>
+    </a>
+    """,
+    unsafe_allow_html=True)
+
 # 슬라이드
 age = st.slider('Select Age', 0, 120, 0, 1)
 st.write('Your age : ', age)

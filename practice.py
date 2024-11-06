@@ -6,7 +6,7 @@ if st.button('click me'):
 
 # 버튼(하이퍼링크)
 if st.button('Go to NAVER'):
-    st.markdown('[](https://www.naver.com)')
+    st.markdown('[naver](https://www.naver.com)')
 
 # 슬라이드
 age = st.slider('Select Age', 0, 120, 0, 1)

@@ -66,6 +66,9 @@ with st.spinner("Loading..."):
 st.success("Done!")
 
 # sidebar
-st.sidebar.title("Sidebar Title")
-st.sidebar.slider("Adjust value", 0, 100, 50)
-st.sidebar.button('click me!')
+st.sidebar.title('정보 입력')
+name = st.sidebar.text_input('이름')
+st.sidebar.slider('나이', 0, 100, 0, 1)
+option = st.sidebar.selectbox('성별', ['남성', '여성'])
+
+st.sidebar.button('적용')

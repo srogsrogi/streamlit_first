@@ -6,22 +6,24 @@ if st.button('click me'):
 
 # 버튼(하이퍼링크)
 if st.button('Go to NAVER'):
-    st.markdown('[](https://naver.com)')
+    st.markdown('[](https://www.naver.com)')
 
 # 슬라이드
 age = st.slider('Select Age', 0, 120, 0, 1)
 st.write('Your age : ', age)
 
+# 셀렉트박스
+option = st.selectbox("Select your gender", ["Male", "Female"])
+st.write("You selected:", option)
+
 # 멀티셀렉트
 options = st.multiselect('Select your options', ['blind', 'deaf', 'mobility impairment', 'others'])
-st.write('You selected : ', options)
+if options:
+    st.markdown("**Selected options:**")
+    st.markdown(", ".join([f"`{option}`" for option in options]))
+else:
+    st.markdown("No options selected.")
 
-# 컬럼 레이아웃
-col1, col2 = st.columns(2)
-with col1:
-    st.write("This is column 1")
-with col2:
-    st.write("This is column 2")
 
 # 탭 레이아웃
 tab1, tab2 = st.tabs(["Tab 1", "Tab 2"])
@@ -45,3 +47,4 @@ st.success("Done!")
 # sidebar
 st.sidebar.title("Sidebar Title")
 st.sidebar.slider("Adjust value", 0, 100, 50)
+st.sidebar.button('click me!')

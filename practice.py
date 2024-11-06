@@ -35,6 +35,16 @@ if options:
 else:
     st.markdown("No options selected.")
 
+# 체크박스를 이용한 다중선택 만들기
+options_ = ["blind", "deaf", "mobility impairment", "others"]
+selected_options = []
+
+for option_ in options_:
+    if st.checkbox(option_):
+        selected_options.append(option_)
+
+st.write("Selected options:", selected_options)
+
 
 # 탭 레이아웃
 tab1, tab2 = st.tabs(["Tab 1", "Tab 2"])

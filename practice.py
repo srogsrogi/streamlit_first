@@ -1,8 +1,8 @@
 import streamlit as st
 
 # 버튼
-if st.button('click me'):
-    st.write('you clicked')
+if st.button('예쥐'):
+    st.write('바보')
 
 # 버튼(하이퍼링크)
 if st.button('Go to NAVER'):
